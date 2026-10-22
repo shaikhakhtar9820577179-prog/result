@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XI Science Result Register 2025–26</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <p class="eyebrow">Khairul Islam Higher Education Society’s</p>
+    <h1>Maharashtra College of Arts, Science and Commerce</h1>
+    <p class="sub">Tabulation Register · Examination 2025–2026 · XI Science · Result date 24/4/2026</p>
+  </div>
+</header>
+
+<main>
+  <section class="stats" id="stats" aria-label="Summary"></section>
+
+  <section class="panel filters">
+    <input id="q" type="search" placeholder="Search name, roll no, student ID or GR no…" autocomplete="off">
+    <select id="div"><option value="">All divisions</option></select>
+    <select id="gender"><option value="">All genders</option><option>FEMALE</option><option>MALE</option></select>
+    <select id="res"><option value="">All results</option><option>PASS</option><option>PROMOTED</option><option>FAIL</option></select>
+    <select id="cls"><option value="">All classes</option><option>I WITH DISTINCTION</option><option>I</option><option>II</option><option>PASS CLASS</option></select>
+    <button id="csv" type="button">Export CSV</button>
+  </section>
+
+  <div class="grid">
+    <section class="panel tablewrap">
+      <div class="count" id="count"></div>
+      <div class="scroll">
+        <table id="tbl">
+          <thead>
+            <tr>
+              <th data-k="roll">Roll</th><th data-k="name">Student</th><th data-k="div">Div</th>
+              <th data-k="tot" class="num">Total /600</th><th data-k="pct" class="num">%</th>
+              <th data-k="res">Result</th><th data-k="cls">Class</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section class="panel"><h2>Division comparison</h2><div id="divs"></div></section>
+      <section class="panel"><h2>Subject averages</h2><div id="subj"></div></section>
+      <section class="panel"><h2>Top 5 (current filter)</h2><ol id="top"></ol></section>
+    </aside>
+  </div>
+</main>
+
+<dialog id="dlg">
+  <div class="dhead"><h3 id="dname"></h3><button id="close" type="button" aria-label="Close">×</button></div>
+  <div id="dbody"></div>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
